@@ -1,33 +1,40 @@
 ---
 import { Image } from 'astro:assets';
-import catGif from '../images/cats.gif';
+import catsImage from '../images/cats.jpeg';
 import Layout from '../layouts/Layout.astro';
 
 ---
 
 <Layout title="allanli.dev">
 	<main>
-		<h1>welcome to allanli.dev</h1>
-		<p class="introduction">
-			dear guest, you've stumbled upon my personal portfolio website. welcome! 👋🏼
-			<br />
-			this site is currently under construction, so enjoy this gif of my cats while you're here 😸
-		</p>
-		<Image src={catGif} alt="cats" title="Cats" class="gif" />
+		<section class="container">
+			<h1>welcome to allanli.dev</h1>
+			<p class="introduction">
+				dear guest, you've stumbled upon my personal portfolio website. welcome! 👋🏼
+				<br />
+				this site is currently under construction, so enjoy this picture of my cats while you're here 😸
+			</p>
+			<Image src={catsImage} alt="cats" title="Cats" class="image" />
+		</section>
 	</main>
 </Layout>
 
 <style>
 	main {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+
 		width: 100vw;
 		height: 100dvh;
 		color: white;
 		font-size: 20px;
 		line-height: 1.6;
+	}
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 2rem;
 	}
 
 	h1 {
@@ -46,10 +53,9 @@ import Layout from '../layouts/Layout.astro';
 		text-align: center;
 	}
 
-	.gif {
+	.image {
 		border-radius: 1rem;
-		width: 80%;
-		max-width: 600px;
-		height: auto;
+		width: auto;
+		height: 50dvh;
 	}
 </style>
