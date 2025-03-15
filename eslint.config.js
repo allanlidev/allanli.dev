@@ -4,6 +4,7 @@ import globals from 'globals'
 import js from '@eslint/js'
 import tseslint from 'typescript-eslint'
 import typescriptParser from '@typescript-eslint/parser'
+import eslintConfigPrettier from 'eslint-config-prettier/flat'
 
 export default [
   js.configs.recommended,
@@ -55,12 +56,7 @@ export default [
     },
   },
   {
-    ignores: [
-      'dist',
-      'node_modules',
-      '.github',
-      'types.generated.d.ts',
-      '.astro',
-    ],
+    ignores: ['dist', 'node_modules', '.github', 'types.generated.d.ts', '.astro'],
   },
+  eslintConfigPrettier,
 ]
