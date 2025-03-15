@@ -5,56 +5,16 @@ import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title="allanli.dev">
-  <main>
-    <section class="container">
-      <h1>welcome to allanli.dev</h1>
-      <p class="introduction">
+  <main class="w-full h-dvh dark:bg-neutral-950 dark:text-white">
+    <section class="flex flex-col justify-center items-center p-8 h-full">
+      <h1 class="text-6xl font-bold text-center mb-4">welcome to allanli.dev</h1>
+      <p class="mb-8 border-2 border-solid border-gray-300 rounded text-center p-4">
         dear guest, you've stumbled upon my personal portfolio website. welcome! 👋🏼
         <br />
         this site is currently under construction, so enjoy this picture of my cats while you're here
         😸
       </p>
-      <Image src={catsImage} alt="cats" title="Cats" class="image" />
+      <Image src={catsImage} alt="cats" title="Cats" class="rounded w-auto h-[50dvh]" />
     </section>
   </main>
 </Layout>
-
-<style>
-  main {
-    width: 100vw;
-    height: 100dvh;
-    color: white;
-    font-size: 20px;
-    line-height: 1.6;
-  }
-
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-  }
-
-  h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
-    margin-bottom: 1em;
-  }
-
-  .introduction {
-    margin-bottom: 2rem;
-    border: 1px solid rgba(var(--accent-light), 25%);
-    padding: 1.5rem;
-    border-radius: 8px;
-    text-align: center;
-  }
-
-  .image {
-    border-radius: 1rem;
-    width: auto;
-    height: 50dvh;
-  }
-</style>
