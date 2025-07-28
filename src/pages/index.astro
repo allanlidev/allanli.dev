@@ -1,6 +1,4 @@
 ---
-import { Image } from 'astro:assets'
-import catsImage from '@/images/cats.jpeg'
 import Layout from '@/layouts/Layout.astro'
 ---
 
@@ -10,11 +8,7 @@ import Layout from '@/layouts/Layout.astro'
       <h1 class="text-6xl font-bold text-center mb-4">welcome to allanli.dev</h1>
       <p class="mb-8 border-2 border-solid border-gray-300 rounded text-center p-4">
         dear guest, you've stumbled upon my personal portfolio website. welcome! 👋🏼
-        <br />
-        this site is currently under construction, so enjoy this picture of my cats while you're here
-        😸
       </p>
-      <Image src={catsImage} alt="cats" title="Cats" class="rounded w-auto h-[50dvh]" />
     </section>
   </main>
 </Layout>
